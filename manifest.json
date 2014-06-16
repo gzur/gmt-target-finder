@@ -1,0 +1,15 @@
+{
+   "content_scripts": [ {
+      "exclude_globs": [  ],
+      "exclude_matches": [  ],
+      "include_globs": [ "http://*urbandead.com/*.cgi*" ],
+      "js": [ "script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "converted_from_user_script": true,
+   "description": "Directions to target for GMTBC on Urban Dead - slightly modified by Lottuk",
+   "key": "ushM62s25D1/uDMclZlzjWssBHDokFxqklbd7HKrAg0=",
+   "name": "GMT Target Finder",
+   "version": "0.9.1"
+}
