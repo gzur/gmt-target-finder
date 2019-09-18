@@ -12,12 +12,9 @@
 /*
    Including the copyright from some of the contained co_ordinates code.
    All code is under GPL.
-
    Copyright 2005 Sebastian Wiers - swiers@gmail.com
-
    This is distributed under the terms of the GPL.
    http://www.gnu.org/licenses/gpl.txt
-
 */
 
 //DETERMINE CO_ORDINATES
@@ -60,7 +57,7 @@ if ((document.cookie.length>0) && (document.cookie.indexOf("GmtX=") != -1) && (d
   c_end=document.cookie.indexOf(";",c_start);
   if (c_end==-1) c_end=document.cookie.length;
   var yTarget = document.cookie.substring(c_start,c_end);
-   
+
    // Compare Loc and target, and determine direction
 var gmt_rows_obj = document.getElementsByClassName("cp")[0].children[0].children[0].rows;
 var gmt_arr_rows = [gmt_rows_obj[1],gmt_rows_obj[2],gmt_rows_obj[3]];
@@ -68,7 +65,7 @@ var gmt_dirs = {
 	NW : gmt_arr_rows[0].children[0],
 	N :  gmt_arr_rows[0].children[1],
 	NE : gmt_arr_rows[0].children[2],
-	
+
 	W :    gmt_arr_rows[1].children[0],
 	HERE : gmt_arr_rows[1].children[1],
 	E :    gmt_arr_rows[1].children[2],
@@ -99,7 +96,8 @@ var gmtWhichWay;
   // at target
 	gmtWhichWay= gmt_dirs.HERE;
   }
-  gmtWhichWay.style.border = "5px solid red";   
-  document.getElementsByClassName("cp")[0].innerHTML += "<p>"+gmtWhichWayStr+"</p>";
+  gmtWhichWay.style.border = "5px solid red";
+  let yDist = Math.abs(yTarget - yLoc)
+  let xDist = Math.abs(xTarget - xLoc)
+  document.getElementsByClassName("gthome")[0].innerHTML += "<p>Location: "+xLoc+","+yLoc+" Distance:"+Math.max(xDist, yDist)+"</p>";
 }
-
