@@ -2,13 +2,11 @@
 // @version 0.9.1
 // @name GMT Target Finder
 // @author Mortificant
-// @namespace http://userscripts.org/scripts/source/47845
+// @namespace https://raw.githubusercontent.com/gzur/gmt-target-finder/master/script.js
 // @description Directions to target for GMTBC on Urban Dead - slightly modified by Lottuk
 // @include http://*urbandead.com/*.cgi*
 // @include https://*urbandead.com/*.cgi*
 // ==/UserScript==
-
-
 
 /*
    Including the copyright from some of the contained co_ordinates code.
